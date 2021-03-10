@@ -1,4 +1,5 @@
 ﻿using SQLModifications.WindowsForms;
+using SQLModifications.WindowsForms.Escalation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,12 @@ namespace SQLModifications
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PocetnaForma());
+            Logger.Logger log = new Logger.Logger();
+            log.WriteLine("SQLModifications Application STARTED");
+           Application.EnableVisualStyles();
+           Application.SetCompatibleTextRenderingDefault(false);
+           Application.Run(new PocetnaForma());
+            
         }
     }
 }

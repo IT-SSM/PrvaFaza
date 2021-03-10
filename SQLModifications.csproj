@@ -60,11 +60,16 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=2.9.1.0, Culture=neutral, PublicKeyToken=e25603a88b3aa7da, processorArchitecture=MSIL">
+      <HintPath>packages\TaskScheduler.2.9.1\lib\net40\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>packages\Oracle.ManagedDataAccess.19.10.1\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,12 +82,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Broker\Broker.cs" />
+    <Compile Include="Broker\BrokerEscalation.cs" />
     <Compile Include="Broker\BrokerOracle.cs" />
     <Compile Include="DomenskeKlase\ColumnsList.cs" />
     <Compile Include="DomenskeKlase\DataTypes.cs" />
     <Compile Include="DomenskeKlase\Escalation.cs" />
     <Compile Include="DomenskeKlase\TableList.cs" />
     <Compile Include="DomenskeKlase\ViewList.cs" />
+    <Compile Include="Escalation\Scheduler.cs" />
+    <Compile Include="Logger\FileWriter.cs" />
+    <Compile Include="Logger\Logger.cs" />
     <Compile Include="WindowsForms\Create\CreateColumn.cs">
       <SubType>Form</SubType>
     </Compile>

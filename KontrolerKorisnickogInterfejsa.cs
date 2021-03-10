@@ -67,6 +67,11 @@ namespace SQLModifications
             }
         }
 
+        public bool Escalation2(string tableName, string condition)
+        {
+            return Broker.BrokerEscalation.Instanca.Escalation2(tableName, condition);
+        }
+
         public void vratiSveDataTypeove(ComboBox comboBoxTipovi)
         {
             List<string> pomLista = new List<string>();
@@ -88,6 +93,15 @@ namespace SQLModifications
             }
         }
 
+        public bool PushField2(string action)
+        {
+             return Broker.BrokerEscalation.Instanca.PushField2(action);
+        }
+
+        public void pomocnaMetoda(string tableName, string condition, string action)
+        {
+            BrokerEscalation.Instanca.pomocnaMetoda(tableName, condition, action);
+        }
         public bool proveraDaLiPostojiKolonaUTabeli(ComboBox comboBoxTabela, TextBox txtNazivTabele)
         {
             if (PocetnaForma.database == "MSSQL")
@@ -359,6 +373,22 @@ namespace SQLModifications
             }
         }
 
+        public List<SQLModifications.DomenskeKlase.Escalation> vratiSveEskalacije()
+        {
+           return BrokerEscalation.Instanca.vratiSveEskalacije();
+        }
+
+        public int InsertIntoEscalationsInterval(ComboBox tableName, TextBox txtEscalation, TextBox condition, TextBox action)
+        {
+            return Broker.BrokerEscalation.Instanca.InsertIntoEscalationsInterval(tableName, txtEscalation, condition, action);
+        }
+
+        public int InsertIntoEscalationsTimer(ComboBox tableName, TextBox txtMessage, TextBox condition, TextBox action)
+        {
+            return Broker.BrokerEscalation.Instanca.InsertIntoEscalationsTimer(tableName, txtMessage, condition, action);
+        }
+
+        
         #endregion
     }
 }

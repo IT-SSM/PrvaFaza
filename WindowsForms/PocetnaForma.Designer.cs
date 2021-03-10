@@ -62,6 +62,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PocetnaForma";
             this.Text = "PocetnaForma";
+            this.Load += new System.EventHandler(this.PocetnaForma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

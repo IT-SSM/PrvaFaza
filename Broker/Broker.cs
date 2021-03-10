@@ -429,7 +429,7 @@ namespace SQLModifications.Broker
                 string noviSelect = select2.Remove(select2.Length - 1, 1);
                 
                 string upit = "CREATE VIEW  " + nazivTabele.Text + " AS SELECT "+select1+noviSelect+" FROM " + tab1 + " LEFT JOIN " +
-                    "" + tab2 + " ON " + tab1 + "." +kol1+ " = " +tab2+ "." +kol2+"";
+                    "" + tab2 + " ON " + tab1 + "." +kol1+ " = " +tab2+ "." +kol2+""; // WHERE USLOV :D
 
                 //string upit = "CREATE VIEW  " + nazivTabele.Text + " AS SELECT * FROM " + tab1 + " LEFT JOIN " +
                 //    "" + tab2 + " ON " + tab1 + "." + kol1 + " = " + tab2 + "." + kol2 + "";
@@ -913,7 +913,6 @@ namespace SQLModifications.Broker
             ZatvoriKonekciju();
             return lista;
         }
-
         public DataTable PopuniDataGridView(ComboBox combo)
         {
             OtvoriKonekciju();

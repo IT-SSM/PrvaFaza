@@ -6,22 +6,15 @@ using System.Threading.Tasks;
 
 namespace SQLModifications.DomenskeKlase
 {
-    public enum EscalationType
-    {
-        Time,
-        Interval
-    }
-    public enum Action
-    {
-        SetField,
-        PushField
-    }
+  
     public class Escalation
     {
         public int IdJob { get; set; }
         public string TableName { get; set; }
-        public EscalationType EscalationType { get; set; }
+        public int EscalationType { get; set; }
         public string Condition { get; set; }
-        public Action Action { get; set; }
+        public string Action { get; set; }
+
+        public System.Timers.Timer Timer { get; set; }
     }
 }

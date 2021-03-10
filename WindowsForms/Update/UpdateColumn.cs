@@ -47,7 +47,6 @@ namespace SQLModifications.WindowsForms.Update
                         {
                             MessageBox.Show("Uspesno ste update-ovali kolonu!");
                         }
-                   
                     }
                 }
                 else
