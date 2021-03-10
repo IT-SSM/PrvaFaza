@@ -22,6 +22,7 @@ namespace SQLModifications.Broker
         //private SqlCommand komanda;
         private Logger.Logger log = new Logger.Logger("Events", "Event");
 
+
         private Object locker = new Object(); 
         #endregion
 
